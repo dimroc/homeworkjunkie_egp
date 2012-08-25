@@ -1,0 +1,187 @@
+/* Positioning for top logo */
+body {	
+	color: #6a7565;
+	font: 12px verdana;  
+}
+.toplogo
+{
+	position:absolute; 
+	top: 12px; 
+	left: 10px;
+	z-index: 9;
+}
+
+/* horizontal menu beneath logo */
+.topmenu 
+{
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	z-index: 8;
+}
+
+/* Body of page, usually does iframe or references another page! */
+.pagebody
+{
+	position: absolute;
+	top: 130px;
+	left: 50px;
+	width: 700px;
+	z-index: 0;
+}
+
+/* Contact info in bottom left of page */
+.contactinfo
+{
+	position: absolute;
+	top: 630px;
+	left: 10px;
+	font: 10px verdana bold;
+}
+
+/* Position for bar under top logo and top menu */
+.topbar
+{
+	position: absolute;
+	top: 68px;
+	left: 0px;
+}
+
+/* Position for bar at bottom */
+.bottombar
+{
+	position: absolute;
+	top: 610px;
+	left: 0px;
+}
+
+/* Menu lined on the lefthand side of the page */
+.leftmenu
+{
+	position: absolute;
+	top: 20px;
+	left: 10px;
+/*	width: 130px;	*/
+}
+
+/* Bar lined on the lefthand side of the page */
+.leftbar
+{
+	position: absolute;
+	top: 75px;
+	left: 135px;
+}
+
+/* Stripped from previous Grad School pages */
+
+A {
+  text-decoration: none;
+  color: #4C54C7;
+  font: 8pt verdana;
+  font-weight: bolder;  
+}
+
+A:link {
+  text-decoration: none;
+  color: #4C54C7;
+  font: 8pt verdana;
+  font-weight: bolder;
+}
+A:visited {
+  text-decoration: none;
+  color: #4C54C7;
+  font: 8pt verdana;
+  font-weight: bolder;
+}
+
+A:hover {
+  text-decoration: none;
+  color: #934B1C;
+  font: 8pt verdana;
+  font-weight: bolder;
+}
+
+.sky_color {
+  color: #4C54C7;
+  font: 8pt verdana;
+  font-weight: bolder;
+}
+
+.shit_color {
+  color: #934B1C;
+  font: 8pt verdana;
+  font-weight: bolder;
+}
+
+td{
+  color: #6a7565;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+p{
+  color: #6a7565;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+p.title{
+  color: #6a7565;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14pt;
+}
+
+.programs_menu{	
+  text-decoration: none;
+  color: #D76F28;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 8pt;
+}
+
+a.programs_menu:hover{
+  text-decoration: none;
+  color: #934B1C;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 8pt;
+}
+
+form.form1 {
+padding-bottom:0; padding-top:0; padding-left:0; padding-right:0;
+margin-bottom:0; margin-top:0; margin-left:0; margin-right:0;
+}
+
+select.menu1 {
+font-family: verdana, arial, helvetica, sans-serif; 
+font-size: 8pt; 
+height: 14pt;
+padding: 0pt;
+}
+
+td.nav {
+background-color:#A8B88D
+}
+
+a.nav:visited {
+text-decoration: none;
+color:#000000;
+font-family:Verdana,Arial,San-serif; 
+font-size:8pt
+}
+
+a.nav:link {
+text-decoration: none; 
+color: #000000; 
+font-family:Verdana,Arial,San-serif; 
+font-size:8pt
+}
+
+a.nav:hover {
+text-decoration: none; 
+color: #006600; 
+font-family:Verdana,Arial,San-serif; 
+font-size:8pt
+}
+
+td.status {
+background-color:#667951
+}

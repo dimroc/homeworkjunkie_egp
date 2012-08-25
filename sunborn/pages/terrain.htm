@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Bad Influence Software</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../bisoft.css" type="text/css">
+</head>
+
+<body>
+<center><img src="../images/terrain_thumb.gif"><br>terrain</center>
+<br>
+<br>
+<br>
+The terrain is implemented as tiles inside a standard Quad Tree with view frustum culling. Each tile has a precomputed triangle strip also known as a 'chunk'.
+Across the whole terrain there are only 3 index buffers used for all tiles, representing the 3 levels of detail.<br>
+<br>
+<center><img src="../images/terrain_quad.gif"></center>
+<br>
+<br>
+  Gaps between tiles because of different levels of details are filled with 'skirts'.<br>
+  <br>
+<center><img src="../images/terrain_skirts.gif"></center>
+<br>
+With the use of vertex shaders, we 'Geomorph' the tiles between the different level of details by interpolating between a lower
+  detail position to a higher detail position. Distant mountains retain a suitable level of detail since we check the 'screen space error' metric.<br>
+  <br>
+
+<center><img src="../images/terrain_puget.gif"></center>
+<br>
+<br>
+<br>
+Texture splatting is featured through the use of shaders and a blend map. This Blend Map uses it's ARGB components to dictate the
+amount a texture is used to determine a pixel's color.<br>
+<br>
+<center><img src="../images/terrain_overhead.gif"></center>
+<br>
+<br>
+The load limit of our terrain renderer is determined by the computer's RAM. Please note that these textures are not final.
+
+</body>
+</html>

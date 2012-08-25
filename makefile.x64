@@ -1,0 +1,395 @@
+# Microsoft Developer Studio Generated NMAKE File, Based on JunkieHomework.dsp
+!IF "$(CFG)" == ""
+CFG=JunkieHomework - Win64 Debug
+!MESSAGE No configuration specified. Defaulting to JunkieHomework - Win64 Debug.
+!ENDIF 
+
+!IF "$(CFG)" != "JunkieHomework - Win64 Debug" && "$(CFG)" != "JunkieHomework - Win64 Release" && "$(CFG)" != "JunkieHomework - Win64 Profile"
+!MESSAGE Invalid configuration "$(CFG)" specified.
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "makefile.x64" CFG="JunkieHomework - Win64 Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "JunkieHomework - Win64 Debug" (based on "Win64 (x64) Application")
+!MESSAGE "JunkieHomework - Win64 Release" (based on "Win64 (x64) Application")
+!MESSAGE "JunkieHomework - Win64 Profile" (based on "Win64 (x64) Application")
+!MESSAGE 
+!ERROR An invalid configuration is specified.
+!ENDIF 
+
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+
+!IF  "$(CFG)" == "JunkieHomework - Win64 Debug"
+
+OUTDIR=.\Debug
+INTDIR=.\Debug
+# Begin Custom Macros
+OutDir=.\Debug
+# End Custom Macros
+
+ALL : "$(OUTDIR)\JunkieHomework.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\dxstdafx.obj"
+	-@erase "$(INTDIR)\dxut.obj"
+	-@erase "$(INTDIR)\dxutenum.obj"
+	-@erase "$(INTDIR)\dxutmisc.obj"
+	-@erase "$(INTDIR)\DXUTRes.obj"
+	-@erase "$(INTDIR)\JunkieHomework.obj"
+	-@erase "$(INTDIR)\JunkieHomework.res"
+	-@erase "$(INTDIR)\JunkieHomework.pch"
+	-@erase "$(INTDIR)\vc60.idb"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\JunkieHomework.pdb"
+	-@erase "$(OUTDIR)\JunkieHomework.exe"
+	-@erase "$(OUTDIR)\JunkieHomework.ilk"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MTd /W4 /Gm /EHsc /GS /ZI /Od /I "Common" /D "WIN64" /D "_DEBUG" /D "_WINDOWS" /D "PROFILE" /D "WIN64" /D "UNICODE" /D "_UNICODE" /Fp"$(INTDIR)\JunkieHomework.pch" /Yu"dxstdafx.h" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /win64 
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\JunkieHomework.res" 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\JunkieHomework.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=bufferoverflowu.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib dxerr9.lib dxguid.lib d3dx9d.lib d3d9.lib winmm.lib comctl32.lib /nologo /subsystem:windows /incremental:yes /pdb:"$(OUTDIR)\JunkieHomework.pdb" /debug /machine:amd64 /out:"$(OUTDIR)\JunkieHomework.exe" /IGNORE:4089 
+LINK32_OBJS= \
+	"$(INTDIR)\dxstdafx.obj" \
+	"$(INTDIR)\dxut.obj" \
+	"$(INTDIR)\dxutenum.obj" \
+	"$(INTDIR)\DXUTRes.obj" \
+	"$(INTDIR)\dxutmisc.obj" \
+	"$(INTDIR)\JunkieHomework.obj" \
+	"$(INTDIR)\JunkieHomework.res"
+
+"$(OUTDIR)\JunkieHomework.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "JunkieHomework - Win64 Release"
+
+OUTDIR=.\Release
+INTDIR=.\Release
+# Begin Custom Macros
+OutDir=.\Release
+# End Custom Macros
+
+ALL : "$(OUTDIR)\JunkieHomework.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\dxstdafx.obj"
+	-@erase "$(INTDIR)\dxut.obj"
+	-@erase "$(INTDIR)\dxutenum.obj"
+	-@erase "$(INTDIR)\dxutmisc.obj"
+	-@erase "$(INTDIR)\DXUTRes.obj"
+	-@erase "$(INTDIR)\JunkieHomework.obj"
+	-@erase "$(INTDIR)\JunkieHomework.res"
+	-@erase "$(INTDIR)\JunkieHomework.pch"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\JunkieHomework.exe"
+	-@erase "$(OUTDIR)\JunkieHomework.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MT /W4 /EHsc /GS /Zi /O2 /I "Common" /D "WIN64" /D "NDEBUG" /D "_WINDOWS" /D "WIN64" /D "UNICODE" /D "_UNICODE" /Fp"$(INTDIR)\JunkieHomework.pch" /Yu"dxstdafx.h" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /GF /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /win64 
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\JunkieHomework.res" 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\JunkieHomework.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=bufferoverflowu.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib dxerr9.lib dxguid.lib d3dx9.lib d3d9.lib winmm.lib comctl32.lib /nologo /subsystem:windows /incremental:no /pdb:"$(OUTDIR)\JunkieHomework.pdb" /debug /machine:amd64 /out:"$(OUTDIR)\JunkieHomework.exe" /opt:ref /opt:icf /IGNORE:4089 
+LINK32_OBJS= \
+	"$(INTDIR)\dxstdafx.obj" \
+	"$(INTDIR)\dxut.obj" \
+	"$(INTDIR)\dxutenum.obj" \
+	"$(INTDIR)\DXUTRes.obj" \
+	"$(INTDIR)\dxutmisc.obj" \
+	"$(INTDIR)\JunkieHomework.obj" \
+	"$(INTDIR)\JunkieHomework.res"
+
+"$(OUTDIR)\JunkieHomework.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "JunkieHomework - Win64 Profile"
+
+OUTDIR=.\Profile
+INTDIR=.\Profile
+# Begin Custom Macros
+OutDir=.\Profile
+# End Custom Macros
+
+ALL : "$(OUTDIR)\JunkieHomework.exe"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\dxstdafx.obj"
+	-@erase "$(INTDIR)\dxut.obj"
+	-@erase "$(INTDIR)\dxutenum.obj"
+	-@erase "$(INTDIR)\dxutmisc.obj"
+	-@erase "$(INTDIR)\DXUTRes.obj"
+	-@erase "$(INTDIR)\JunkieHomework.obj"
+	-@erase "$(INTDIR)\JunkieHomework.res"
+	-@erase "$(INTDIR)\JunkieHomework.pch"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\JunkieHomework.exe"
+	-@erase "$(OUTDIR)\JunkieHomework.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+CPP=cl.exe
+CPP_PROJ=/nologo /MT /W4 /EHsc /GS /Zi /O2 /I "Common" /D "WIN64" /D "NDEBUG" /D "_WINDOWS" /D "PROFILE" /D "WIN64" /D "UNICODE" /D "_UNICODE" /Fp"$(INTDIR)\JunkieHomework.pch" /Yu"dxstdafx.h" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /GF /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /win64 
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\JunkieHomework.res" 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\JunkieHomework.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=bufferoverflowu.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib dxerr9.lib dxguid.lib d3dx9.lib d3d9.lib winmm.lib comctl32.lib /nologo /subsystem:windows /incremental:no /pdb:"$(OUTDIR)\JunkieHomework.pdb" /debug /machine:amd64 /out:"$(OUTDIR)\JunkieHomework.exe" /opt:ref /opt:icf /IGNORE:4089 
+LINK32_OBJS= \
+	"$(INTDIR)\dxstdafx.obj" \
+	"$(INTDIR)\dxut.obj" \
+	"$(INTDIR)\dxutenum.obj" \
+	"$(INTDIR)\DXUTRes.obj" \
+	"$(INTDIR)\dxutmisc.obj" \
+	"$(INTDIR)\JunkieHomework.obj" \
+	"$(INTDIR)\JunkieHomework.res"
+
+"$(OUTDIR)\JunkieHomework.exe" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ENDIF 
+
+
+!IF "$(NO_EXTERNAL_DEPS)" != "1"
+!IF EXISTS("JunkieHomework.dep")
+!INCLUDE "JunkieHomework.dep"
+!ELSE 
+!ENDIF 
+!ENDIF 
+
+
+!IF "$(CFG)" == "JunkieHomework - Win64 Debug" || "$(CFG)" == "JunkieHomework - Win64 Release" || "$(CFG)" == "JunkieHomework - Win64 Profile"
+SOURCE=JunkieHomework.rc
+
+"$(INTDIR)\JunkieHomework.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+SOURCE=Common\dxstdafx.cpp
+
+!IF  "$(CFG)" == "JunkieHomework - Win64 Debug"
+
+CPP_SWITCHES=/nologo /MTd /W4 /Gm /EHsc /GS /ZI /Od /I "Common" /D "WIN64" /D "_DEBUG" /D "_WINDOWS" /D "PROFILE" /D "WIN64" /D "UNICODE" /D "_UNICODE" /Fp"$(INTDIR)\JunkieHomework.pch" /Yc"dxstdafx.h" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\"  /c 
+
+"$(INTDIR)\dxstdafx.obj"	"$(INTDIR)\JunkieHomework.pch" : $(SOURCE) "$(INTDIR)"
+	$(CPP) @<<
+  $(CPP_SWITCHES) $(SOURCE)
+<<
+
+
+!ELSEIF  "$(CFG)" == "JunkieHomework - Win64 Release"
+
+CPP_SWITCHES=/nologo /MT /W4 /EHsc /GS /Zi /O2 /I "Common" /D "WIN64" /D "NDEBUG" /D "_WINDOWS" /D "WIN64" /D "UNICODE" /D "_UNICODE" /Fp"$(INTDIR)\JunkieHomework.pch" /Yc"dxstdafx.h" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /GF /c 
+
+"$(INTDIR)\dxstdafx.obj"	"$(INTDIR)\JunkieHomework.pch" : $(SOURCE) "$(INTDIR)"
+	$(CPP) @<<
+  $(CPP_SWITCHES) $(SOURCE)
+<<
+
+
+!ELSEIF  "$(CFG)" == "JunkieHomework - Win64 Profile"
+
+CPP_SWITCHES=/nologo /MT /W4 /EHsc /GS /Zi /O2 /I "Common" /D "WIN64" /D "NDEBUG" /D "_WINDOWS" /D "PROFILE" /D "WIN64" /D "UNICODE" /D "_UNICODE" /Fp"$(INTDIR)\JunkieHomework.pch" /Yc"dxstdafx.h" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /GF /c 
+
+"$(INTDIR)\dxstdafx.obj"	"$(INTDIR)\JunkieHomework.pch" : $(SOURCE) "$(INTDIR)"
+	$(CPP) @<<
+  $(CPP_SWITCHES) $(SOURCE)
+<<
+
+
+!ENDIF 
+
+SOURCE=Common\dxut.cpp
+
+"$(INTDIR)\dxut.obj" : $(SOURCE) "$(INTDIR)" "$(INTDIR)\JunkieHomework.pch"
+	$(CPP) $(CPP_PROJ) $(SOURCE)
+
+
+SOURCE=Common\dxutenum.cpp
+
+"$(INTDIR)\dxutenum.obj" : $(SOURCE) "$(INTDIR)" "$(INTDIR)\JunkieHomework.pch"
+	$(CPP) $(CPP_PROJ) $(SOURCE)
+
+
+SOURCE=Common\dxutmisc.cpp
+
+"$(INTDIR)\dxutmisc.obj" : $(SOURCE) "$(INTDIR)" "$(INTDIR)\JunkieHomework.pch"
+	$(CPP) $(CPP_PROJ) $(SOURCE)
+
+
+SOURCE=Common\DXUTRes.cpp
+
+"$(INTDIR)\DXUTRes.obj" : $(SOURCE) "$(INTDIR)" "$(INTDIR)\JunkieHomework.pch"
+	$(CPP) $(CPP_PROJ) $(SOURCE)
+
+
+SOURCE=JunkieHomework.cpp
+
+!IF  "$(CFG)" == "JunkieHomework - Win64 Debug"
+
+CPP_SWITCHES=/nologo /MTd /W4 /Gm /EHsc /GS /ZI /Od /I "Common" /D "WIN64" /D "_DEBUG" /D "_WINDOWS" /D "PROFILE" /D "WIN64" /D "UNICODE" /D "_UNICODE" /Fp"$(INTDIR)\JunkieHomework.pch" /Yu"dxstdafx.h" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /c 
+
+"$(INTDIR)\JunkieHomework.obj" : $(SOURCE) "$(INTDIR)" "$(INTDIR)\JunkieHomework.pch"
+	$(CPP) @<<
+  $(CPP_SWITCHES) $(SOURCE)
+<<
+
+
+!ELSEIF  "$(CFG)" == "JunkieHomework - Win64 Release"
+
+CPP_SWITCHES=/nologo /MT /W4 /EHsc /GS /Zi /O2 /I "Common" /D "WIN64" /D "NDEBUG" /D "_WINDOWS" /D "WIN64" /D "UNICODE" /D "_UNICODE" /Fp"$(INTDIR)\JunkieHomework.pch" /Yu"dxstdafx.h" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /GF /c 
+
+"$(INTDIR)\JunkieHomework.obj" : $(SOURCE) "$(INTDIR)" "$(INTDIR)\JunkieHomework.pch"
+	$(CPP) @<<
+  $(CPP_SWITCHES) $(SOURCE)
+<<
+
+
+!ELSEIF  "$(CFG)" == "JunkieHomework - Win64 Profile"
+
+CPP_SWITCHES=/nologo /MT /W4 /EHsc /GS /Zi /O2 /I "Common" /D "WIN64" /D "NDEBUG" /D "_WINDOWS" /D "PROFILE" /D "WIN64" /D "UNICODE" /D "_UNICODE" /Fp"$(INTDIR)\JunkieHomework.pch" /Yu"dxstdafx.h" /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /GF /c 
+
+"$(INTDIR)\JunkieHomework.obj" : $(SOURCE) "$(INTDIR)" "$(INTDIR)\JunkieHomework.pch"
+	$(CPP) @<<
+  $(CPP_SWITCHES) $(SOURCE)
+<<
+
+
+!ENDIF 
+
+
+!ENDIF 
+
